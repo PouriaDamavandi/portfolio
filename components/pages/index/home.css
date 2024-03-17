@@ -52,7 +52,7 @@
   fill: #fff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 389px) {
   .arrow--left {
     left: 15px;
     top: 70px;
@@ -65,15 +65,41 @@
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 390px) {
   .arrow--left {
     left: 15px;
-    top: 140px;
+    top: 90px;
   }
 
   .arrow--right {
     left: auto;
-    top: 140px;
+    top: 90px;
+    right: 15px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .arrow--left {
+    left: 15px;
+    top: 100px;
+  }
+
+  .arrow--right {
+    left: auto;
+    top: 100px;
+    right: 15px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .arrow--left {
+    left: 15px;
+    top: 200px;
+  }
+
+  .arrow--right {
+    left: auto;
+    top: 200px;
     right: 15px;
   }
 }

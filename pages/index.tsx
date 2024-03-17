@@ -1,12 +1,10 @@
 import HomePageHero from "@/components/pages/index/home";
-import MainCard from "@/components/ui/card/mainCard";
-import { Arrow } from "@/components/ui/icons/arrow";
 import MainSection from "@/components/ui/section/mainSection";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { useState } from "react";
-import sample from "../public/images/mihanInsurance.png";
-import sample2 from "../public/images/pwa.png";
+
+import SelectedWorks from "@/components/pages/index/selectedWorks/selectedWorks";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,85 +20,11 @@ export default function Home() {
     },
   });
 
-  const data = [
-    {
-      id: 1,
-      title: "Mihan Insurance Website",
-      image: sample,
-      description: "i work in mihan",
-    },
-    {
-      id: 2,
-      title: "Mihan Insurance Website",
-      image: sample2,
-      description: "i work in mihan",
-    },
-    {
-      id: 3,
-      title: "Mihan Insurance Website",
-      image: sample,
-      description: "i work in mihan",
-    },
-    {
-      id: 4,
-      title: "Mihan Insurance Website",
-      image: sample2,
-      description: "i work in mihan",
-    },
-  ];
-
   return (
     <main>
       <HomePageHero />
       <MainSection id="work" title="SELECTED WORKS">
-        <div className="navigation-wrapper">
-          <div ref={sliderRef} className="keen-slider">
-            {data.map((item) => (
-              <div key={item.id} className="keen-slider__slide">
-                <MainCard
-                  title={item.title}
-                  description={item.description}
-                  image={item.image}
-                />
-              </div>
-            ))}
-            {loaded && instanceRef.current && (
-              <>
-                <Arrow
-                  left
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    instanceRef.current?.prev();
-                  }}
-                  disabled={currentSlide === 0}
-                />
-                <Arrow
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    instanceRef.current?.next();
-                  }}
-                  disabled={
-                    currentSlide ===
-                    instanceRef.current.track.details.slides.length - 1
-                  }
-                />
-              </>
-            )}
-          </div>
-          {loaded && instanceRef.current && (
-            <div className="dots">
-              {Array.from(
-                Array(instanceRef.current.track.details.slides.length).keys()
-              ).map((idx) => (
-                <button
-                  key={idx}
-                  onClick={() => instanceRef.current?.moveToIdx(idx)}
-                  className={`dot${currentSlide === idx ? " active" : ""}`}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        <SelectedWorks />
       </MainSection>
       <MainSection id="about" title="ABOUT ME">
         <p>
