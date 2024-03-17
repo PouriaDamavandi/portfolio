@@ -23,9 +23,9 @@ const HomePageHero = () => {
         veritatis, consequuntur explicabo animi iste.
         <br />
         <a
-          href="../../../public/images/Pouria Damavandi CV.pdf"
+          href="../../../public/files/Pouria Damavandi CV.pdf"
           className="mt-4 block"
-          download="Pouria Damavnadi Resume"
+          download="Pouria_Damavandi_CV.pdf"
         >
           Resume
         </a>
