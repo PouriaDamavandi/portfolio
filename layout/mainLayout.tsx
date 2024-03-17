@@ -7,10 +7,8 @@ import { FC } from "react";
 const MainLayout: FC<IMainLayout> = ({ children }) => {
   return (
     <div className="bg-slate-900 text-cyan-50">
-      <MainContainer>
-        <MainHeader />
-        {children}
-      </MainContainer>
+      <MainHeader />
+      <MainContainer>{children}</MainContainer>
     </div>
   );
 };
