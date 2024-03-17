@@ -6,8 +6,8 @@ const MainHeader: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="flex flex-row md:justify-between justify-between items-center w-full relative px-4 py-8 transition-all duration-300 ">
-      <p className="text-2xl">Pouria Damavandi</p>
+    <div className="flex flex-row md:justify-between justify-between items-center w-full relative px-16 py-8 transition-all duration-300 ">
+      <p className="text-xl">Pouria Damavandi</p>
       <div className="hidden md:flex md:flex-row md:gap-10 gap-2">
         <a href="#work">Work</a>
         <a href="#about">About</a>
