@@ -4,4 +4,5 @@ export interface IMainCard {
   image: StaticImageData;
   title: string;
   description: string;
+  id: number;
 }
